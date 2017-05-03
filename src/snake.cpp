@@ -107,6 +107,7 @@ void snake::deploy(int &x,int &y)
 		rect.x = x*FAT;
 		rect.y = y*FAT;
 		SDL_BlitSurface(food2D, nullptr, screen, &rect);
+		cout<<"Test Git"<<endl;
 	}
 }
 
