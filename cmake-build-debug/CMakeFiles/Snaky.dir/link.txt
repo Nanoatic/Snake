@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/Snaky.dir/src/Source.cpp.o CMakeFiles/Snaky.dir/src/snake.cpp.o CMakeFiles/Snaky.dir/src/window.cpp.o  -o Snaky /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so 

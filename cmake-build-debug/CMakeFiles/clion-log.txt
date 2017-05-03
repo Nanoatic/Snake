@@ -1,0 +1,4 @@
+/home/nanoatic/Programs/Clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/nanoatic/Desktop/Snaky
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nanoatic/Desktop/Snaky/cmake-build-debug
