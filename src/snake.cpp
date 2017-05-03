@@ -18,7 +18,7 @@ snake::snake(): direction(0) , feeding(0), deployed(false), score(0),loss(false)
 	fed = Mix_LoadWAV("../resources/feed.wav");
     lose = Mix_LoadWAV("../resources/lose.wav");
 }
-
+//this constructor we will actually use
 snake::snake(int width, int height, string snakename, color rgb) : window(FAT*width, FAT*height, snakename, rgb), direction(0), feeding(0), deployed(false), score(0), loss(false)
 {
 	head = new part{1,1,IDLE,nullptr, nullptr };
@@ -57,7 +57,7 @@ snake::snake(int width, int height, string snakename) :window(FAT*width, FAT*hei
     lose = Mix_LoadWAV("../resources/lose.wav");
 
 }
-
+//convert score to string
 string snake::score_to_string()
 {
 	ostringstream strm;
@@ -65,7 +65,7 @@ string snake::score_to_string()
 	
 	return "Score "+strm.str();
 }
-
+//used to test if something on the snake {food} to avoid spwning the food on the snake
 bool snake::onsnake(int x, int y)
 {
 	part * cond = head;
@@ -79,12 +79,13 @@ bool snake::onsnake(int x, int y)
 	}
 	return false;
 }
-
+//test Collision
 bool snake::collision()
 {
 	/*if (head->x == 0 || head->y == 0 || head->y==screen->h/FAT-1 || head->x==screen->w/FAT-1)
 		return true;*/
 	part * cond = head->next;
+    //test all parts with collision with the head
 	while (cond != nullptr)
 	{
 		if (head->x == cond->x && head->y == cond->y)
@@ -93,7 +94,7 @@ bool snake::collision()
 	}
 	return false;
 }
-
+//deploy food
 void snake::deploy(int &x,int &y)
 {
 	if (!deployed) {
@@ -107,10 +108,9 @@ void snake::deploy(int &x,int &y)
 		rect.x = x*FAT;
 		rect.y = y*FAT;
 		SDL_BlitSurface(food2D, nullptr, screen, &rect);
-		cout<<"Test Git"<<endl;
 	}
 }
-
+//draw the whole snake
 void snake::render()
 {
 	SDL_Rect rect;
@@ -127,13 +127,15 @@ void snake::render()
 		cond = cond->next;
 	}
 }
-
+// move snake head to the right
 void snake::moveright()
 {
+    // get tail part
 	part * cond = tail;
 	SDL_Rect rect;
 	rect.x = cond->x*FAT;
 	rect.y = cond->y*FAT;
+    //remove the edge of the tail every frame
 	SDL_BlitSurface(reset2D, nullptr, screen, &rect);
 	head->direction = RIGHT;
 		while (cond->prec!= nullptr)
@@ -147,7 +149,7 @@ void snake::moveright()
 		if (head->x >= screen->w/FAT)
 			head->x =0 ;
 }
-
+//move  snake head to the left
 void snake::moveleft()
 {
 	part * cond = tail;
@@ -167,13 +169,14 @@ void snake::moveleft()
 	if (head->x < 0)
 		head->x = screen->w / FAT -1;
 }
-
+//move snake head up
 void snake::moveup()
 {
 	part * cond = tail;
 	SDL_Rect rect;
 	rect.x = cond->x*FAT;
 	rect.y = cond->y*FAT;
+
 	SDL_BlitSurface(reset2D, nullptr, screen, &rect);
 	head->direction = UP;
 	while (cond->prec != nullptr)
@@ -187,7 +190,7 @@ void snake::moveup()
 	if (head->y < 0)
 		head->y =screen->h / FAT-1;
 }
-
+//move snake head down
 void snake::movedown()
 {
 	part * cond = tail;
@@ -207,11 +210,13 @@ void snake::movedown()
 	if (head->y >= screen->h/FAT)
 		head->y=0;
 }
-
+//feed and add to tail the foot part will become the tail part
 void snake::feed(int row ,int col)
 {
 	Mix_PlayChannel(4, fed, 0);
+    //deployed is used to deploy next food
 	deployed = false;
+    //scoring
 	score += 50;
 	int x(0),y(0);
 
@@ -241,6 +246,7 @@ void snake::feed(int row ,int col)
 		
 		break;
 	}
+    //adding new part to snake
 	part * newprt = new part{ x,y,tail->direction,nullptr, nullptr };
 	
 	newprt->prec=tail;
@@ -299,6 +305,7 @@ void snake::mainloop()
 
 			}
 		}
+        // snake not to move in the opposite direction
 		switch (direction)
 		{
 		case RIGHT:
