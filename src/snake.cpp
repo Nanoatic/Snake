@@ -381,11 +381,12 @@ void snake::mainloop()
 		}
 		endTime=SDL_GetTicks();
 		diff=endTime-startTime;
-
+        //fps calculation and locking
 		if((diff)<=1000/FPS)
 		SDL_Delay(1000/FPS-diff);
         string strfps=to_string(1000/FPS-diff);
         strfps="fps "+strfps;
+		//draw fps
         fps2D = TTF_RenderText_Shaded(scorefont,strfps.c_str()  ,{ 255, 255, 255 }, { 0,0,0 } );
         SDL_BlitSurface(fps2D, nullptr, screen, &rectfps);
 	}

@@ -40,7 +40,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92f22554-f1d7-4c5f-b7ec-1ba8a5c70ccb" name="Default" comment="adding comments">
+    <list default="true" id="92f22554-f1d7-4c5f-b7ec-1ba8a5c70ccb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/snake.cpp" afterPath="$PROJECT_DIR$/src/snake.cpp" />
     </list>
@@ -102,8 +102,8 @@
       <file leaf-file-name="snake.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/snake.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="311" column="4" lean-forward="false" selection-start-line="311" selection-start-column="4" selection-end-line="311" selection-end-column="4" />
+            <state relative-caret-position="440">
+              <caret line="388" column="18" lean-forward="false" selection-start-line="388" selection-start-column="18" selection-end-line="388" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -529,7 +529,7 @@
       <workItem from="1493718388975" duration="7328000" />
       <workItem from="1493803262586" duration="863000" />
       <workItem from="1493804147334" duration="16439000" />
-      <workItem from="1493823031853" duration="1599000" />
+      <workItem from="1493823031853" duration="2195000" />
     </task>
     <task id="LOCAL-00001" summary="testing from clion to github">
       <created>1493819893319</created>
@@ -545,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493819997855</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding comments">
+      <created>1493829470566</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493829470566</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30187000" />
+    <option name="totallyTimeSpent" value="30783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="736" extended-state="6" />
@@ -568,7 +575,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -960,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/snake.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="311" column="4" lean-forward="false" selection-start-line="311" selection-start-column="4" selection-end-line="311" selection-end-column="4" />
+        <state relative-caret-position="440">
+          <caret line="388" column="18" lean-forward="false" selection-start-line="388" selection-start-column="18" selection-end-line="388" selection-end-column="18" />
           <folding />
         </state>
       </provider>
