@@ -11,30 +11,33 @@
 
 using namespace std;
 typedef struct color color;
-struct color
-{
-	Uint8 red;
-	Uint8 green;
-	Uint8 blue;	
+struct color {
+    Uint8 red;
+    Uint8 green;
+    Uint8 blue;
 };
-class window
-{
+
+class window {
 public:
-	window();
-	window(int width, int height,  string windowname);
-	window(int width, int height,string windowname,color rgb);
-	~window();
-	void update();
-	SDL_Surface * getScreen();
-	virtual void mainloop();
+    window();
+
+    window(int width, int height, string windowname);
+
+    window(int width, int height, string windowname, color rgb);
+
+    virtual ~window();
+
+    virtual void mainloop();
+
+    void update();
 
 protected :
-    SDL_Window * windowloc;
-	SDL_Event event;
-	SDL_Surface *screen;
+    SDL_Window *windowloc;
+    SDL_Event event;
+    SDL_Surface *screen;
     SDL_Renderer *renderer;
     SDL_Texture *texture;
-	bool run ;
+    bool run;
 };
 
 #endif

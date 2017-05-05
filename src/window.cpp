@@ -20,7 +20,7 @@ window::window() : run(true) {
 
 
 }
-
+//main constructor
 window::window(int width, int height, string windowname, color rgb) : run(true) {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
         cout << SDL_GetError << endl;
@@ -34,10 +34,10 @@ window::window(int width, int height, string windowname, color rgb) : run(true) 
     windowloc = SDL_CreateWindow(windowname.c_str(),
                                  SDL_WINDOWPOS_CENTERED,
                                  SDL_WINDOWPOS_CENTERED,
-                                 height, width,
+                                 width,height,
                                  SDL_WINDOW_OPENGL);
     renderer = SDL_CreateRenderer(windowloc, -1, SDL_RENDERER_PRESENTVSYNC);
-    screen = SDL_CreateRGBSurface(0, 640, 480, 32,
+    screen = SDL_CreateRGBSurface(0,  width,height , 32,
                                   rgb.red,
                                   rgb.green,
                                   rgb.blue,
@@ -45,7 +45,7 @@ window::window(int width, int height, string windowname, color rgb) : run(true) 
     texture = SDL_CreateTexture(renderer,
                                 SDL_PIXELFORMAT_ARGB8888,
                                 SDL_TEXTUREACCESS_STREAMING,
-                                640, 480);
+            width, height);
 }
 
 window::window(int width, int height, string windowname) : run(true) {
@@ -81,9 +81,6 @@ window::~window() {
     SDL_Quit();
 }
 
-SDL_Surface *window::getScreen() {
-    return screen;
-}
 
 void window::mainloop() {
 
@@ -92,6 +89,8 @@ void window::mainloop() {
         switch (event.type) {
             case SDL_QUIT:
                 run = false;
+                break;
+            default:
                 break;
 
         }
