@@ -14,3 +14,4 @@ This is a 64 bit snake game made by using only sdl surfaces , couple of simple w
 Copy all dll files placed in  ``libs/SDL2-2.0.9-Mingw/x86_64-w64-mingw32/bin`` besides the exe output file.
 
 ## Screenshots
+![alt text](https://github.com/Nanoatic/Snaky/blob/master/screenshots/snakeCapture0.PNG)
