@@ -14,6 +14,7 @@
 
 
 typedef struct part part;
+
 struct part {
     int x;
     int y;
