@@ -1,3 +1,0 @@
-C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir
-C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/rebuild_cache.dir
