@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Snaky.dir/src/Source.cpp.o"
-  "CMakeFiles/Snaky.dir/src/snake.cpp.o"
-  "CMakeFiles/Snaky.dir/src/window.cpp.o"
+  "CMakeFiles/Snaky.dir/src/Source.cpp.obj"
+  "CMakeFiles/Snaky.dir/src/snake.cpp.obj"
+  "CMakeFiles/Snaky.dir/src/window.cpp.obj"
   "Snaky.pdb"
-  "Snaky"
+  "Snaky.exe"
+  "Snaky.exe.manifest"
+  "libSnaky.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

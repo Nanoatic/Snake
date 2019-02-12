@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nanoatic/Desktop/Snaky/src/Source.cpp" "/home/nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/Source.cpp.o"
-  "/home/nanoatic/Desktop/Snaky/src/snake.cpp" "/home/nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/snake.cpp.o"
-  "/home/nanoatic/Desktop/Snaky/src/window.cpp" "/home/nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/window.cpp.o"
+  "C:/Users/Nanoatic/Desktop/Snaky/src/Source.cpp" "C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/Source.cpp.obj"
+  "C:/Users/Nanoatic/Desktop/Snaky/src/snake.cpp" "C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/snake.cpp.obj"
+  "C:/Users/Nanoatic/Desktop/Snaky/src/window.cpp" "C:/Users/Nanoatic/Desktop/Snaky/cmake-build-debug/CMakeFiles/Snaky.dir/src/window.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
