@@ -85,10 +85,10 @@ Here is a rough list of what works, and what doesn't:
   * multi-touch input
   * app events.  SDL_APP_WILLENTER* and SDL_APP_DIDENTER* events get sent out as
     appropriate.
-  * window events
+  * GameWindow events
   * using Direct3D 11.x APIs outside of SDL.  Non-XAML / Direct3D-only apps can
     choose to render content directly via Direct3D, using SDL to manage the
-    internal WinRT window, as well as input and audio.  (Use
+    internal WinRT GameWindow, as well as input and audio.  (Use
     SDL_GetWindowWMInfo() to get the WinRT 'CoreWindow', and pass it into
     IDXGIFactory2::CreateSwapChainForCoreWindow() as appropriate.)
 
@@ -324,7 +324,7 @@ Metadata' file (.winmd) for your app.  Not doing so can lead to build errors.**
 At this point, you can add in SDL-specific source code.  Be sure to include a 
 C-style main function (ie: `int main(int argc, char *argv[])`).  From there you 
 should be able to create a single `SDL_Window` (WinRT apps can only have one 
-window, at present), as well as an `SDL_Renderer`.  Direct3D will be used to 
+GameWindow, at present), as well as an `SDL_Renderer`.  Direct3D will be used to 
 draw content.  Events are received via SDL's usual event functions 
 (`SDL_PollEvent`, etc.)  If you have a set of existing source files and assets, 
 you can start adding them to the project now.  If not, or if you would like to 
@@ -355,7 +355,7 @@ your project, and open the file in Visual C++'s text editor.
     int main(int argc, char **argv)
     {
         SDL_DisplayMode mode;
-        SDL_Window * window = NULL;
+        SDL_Window * GameWindow = NULL;
         SDL_Renderer * renderer = NULL;
         SDL_Event evt;
     
@@ -367,7 +367,7 @@ your project, and open the file in Visual C++'s text editor.
             return 1;
         }
     
-        if (SDL_CreateWindowAndRenderer(mode.w, mode.h, SDL_WINDOW_FULLSCREEN, &window, &renderer) != 0) {
+        if (SDL_CreateWindowAndRenderer(mode.w, mode.h, SDL_WINDOW_FULLSCREEN, &GameWindow, &renderer) != 0) {
             return 1;
         }
     
@@ -415,11 +415,11 @@ Your app project should now be setup, and you should be ready to build your app.
 To run it on the local machine, open the Debug menu and choose "Start 
 Debugging".  This will build your app, then run your app full-screen.  To switch 
 out of your app, press the Windows key.  Alternatively, you can choose to run 
-your app in a window.  To do this, before building and running your app, find 
+your app in a GameWindow.  To do this, before building and running your app, find 
 the drop-down menu in Visual C++'s toolbar that says, "Local Machine".  Expand 
 this by clicking on the arrow on the right side of the list, then click on 
 Simulator.  Once you do that, any time you build and run the app, the app will 
-launch in window, rather than full-screen.
+launch in GameWindow, rather than full-screen.
 
 
 #### 7.A. Running apps on older, ARM-based, "Windows RT" devices ####
@@ -504,16 +504,16 @@ To help determine why this error comes up:
 
 1. open a copy of Visual Studio without opening a project file.  This can be
    accomplished via Windows' Start Menu, among other means.
-2. show Visual Studio's Output window.  This can be done by going to VS'
+2. show Visual Studio's Output GameWindow.  This can be done by going to VS'
    menu bar, then to View, and then to Output.
 3. try opening the SDL project file directly by going to VS' menu bar, then
    to File, then to Open, then to Project/Solution.  When a File-Open dialog
    appears, open the SDL project (such as the one in SDL's source code, in its
    directory, VisualC-WinRT/UWP_VS2015/).
 4. after attempting to open SDL's Visual Studio project file, additional error
-   information will be output to the Output window.
+   information will be output to the Output GameWindow.
 
-If Visual Studio reports (via its Output window) that the project:
+If Visual Studio reports (via its Output GameWindow) that the project:
 
 "could not be loaded because it's missing install components. To fix this launch Visual Studio setup with the following selections:
 Microsoft.VisualStudio.ComponentGroup.UWP.VC"
@@ -527,7 +527,7 @@ making sure these items are checked as-appropriate, install them.
 
 Once you install these components, try re-launching Visual Studio, and re-opening
 the SDL project file.  If you still get the error dialog, try using the Output
-window, again, seeing what Visual Studio says about it.
+GameWindow, again, seeing what Visual Studio says about it.
 
 
 #### Game controllers / joysticks aren't working!

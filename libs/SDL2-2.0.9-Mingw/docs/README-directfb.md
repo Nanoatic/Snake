@@ -53,12 +53,12 @@ be shown.
 Simple Window Manager
 =====================
 
-The driver has support for a very, very basic window manager you may
+The driver has support for a very, very basic GameWindow manager you may
 want to use when running with "wm=default". Use
 
 export SDL_DIRECTFB_WM=1
 
-to enable basic window borders. In order to have the window title rendered,
+to enable basic GameWindow borders. In order to have the GameWindow title rendered,
 you need to have the following font installed:
 
 /usr/share/fonts/truetype/freefont/FreeSans.ttf

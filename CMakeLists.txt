@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(Snaky)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 20)
 
 set(SDL_STATIC 1)
 if (UNIX)
@@ -32,7 +32,7 @@ endif (WIN32)
 link_directories(${SDL2_LIBRARY_DIR})
 include_directories(${SDL2_INCLUDE_DIR})
 
-set(SOURCE_FILES src/Source.cpp src/snake.cpp src/snake.h src/window.cpp src/window.h )
+set(SOURCE_FILES src/Source.cpp src/SnakeGame.cpp src/SnakeGame.h src/GameWindow.cpp src/GameWindow.h src/TimeManager.cpp src/TimeManager.h )
 
 add_executable(Snaky  ${SOURCE_FILES} )
 

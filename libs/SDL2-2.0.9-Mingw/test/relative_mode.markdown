@@ -5,8 +5,8 @@ See test program at the bottom of this file.
 
 Initial tests:
 
- - When in relative mode, the mouse shouldn't be moveable outside of the window.
- - When the cursor is outside the window when relative mode is enabled, mouse
+ - When in relative mode, the mouse shouldn't be moveable outside of the GameWindow.
+ - When the cursor is outside the GameWindow when relative mode is enabled, mouse
    clicks should not go to whatever app was under the cursor previously.
  - When alt/cmd-tabbing between a relative mode app and another app, clicks when
    in the relative mode app should also not go to whatever app was under the

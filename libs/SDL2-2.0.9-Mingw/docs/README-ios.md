@@ -60,11 +60,11 @@ Here is a more manual method:
 5.  Delete the contents of main.m and program your app as a regular SDL program instead.  You may replace main.m with your own main.c, but you must tell Xcode not to use the project prefix file, as it includes Objective-C code.
 
 ==============================================================================
-Notes -- Retina / High-DPI and window sizes
+Notes -- Retina / High-DPI and GameWindow sizes
 ==============================================================================
 
 Window and display mode sizes in SDL are in "screen coordinates" (or "points",
-in Apple's terminology) rather than in pixels. On iOS this means that a window
+in Apple's terminology) rather than in pixels. On iOS this means that a GameWindow
 created on an iPhone 6 will have a size in screen coordinates of 375 x 667,
 rather than a size in pixels of 750 x 1334. All iOS apps are expected to
 size their content based on screen coordinates / points rather than pixels,
@@ -73,10 +73,10 @@ as this allows different iOS devices to have different pixel densities
 
 By default SDL will not use the full pixel density of the screen on
 Retina/high-dpi capable devices. Use the SDL_WINDOW_ALLOW_HIGHDPI flag when
-creating your window to enable high-dpi support.
+creating your GameWindow to enable high-dpi support.
 
 When high-dpi support is enabled, SDL_GetWindowSize() and display mode sizes
-will still be in "screen coordinates" rather than pixels, but the window will
+will still be in "screen coordinates" rather than pixels, but the GameWindow will
 have a much greater pixel density when the device supports it, and the
 SDL_GL_GetDrawableSize() or SDL_GetRendererOutputSize() functions (depending on
 whether raw OpenGL or the SDL_Render API is used) can be queried to determine
@@ -220,7 +220,7 @@ Notes -- iPhone SDL limitations
 ==============================================================================
 
 Windows:
-	Full-size, single window applications only.  You cannot create multi-window SDL applications for iPhone OS.  The application window will fill the display, though you have the option of turning on or off the menu-bar (pass SDL_CreateWindow() the flag SDL_WINDOW_BORDERLESS).
+	Full-size, single GameWindow applications only.  You cannot create multi-GameWindow SDL applications for iPhone OS.  The application GameWindow will fill the display, though you have the option of turning on or off the menu-bar (pass SDL_CreateWindow() the flag SDL_WINDOW_BORDERLESS).
 
 Textures:
 	The optimal texture formats on iOS are SDL_PIXELFORMAT_ABGR8888, SDL_PIXELFORMAT_ABGR8888, SDL_PIXELFORMAT_BGR888, and SDL_PIXELFORMAT_RGB24 pixel formats.
@@ -234,7 +234,7 @@ Game Center
 
 Game Center integration might require that you break up your main loop in order to yield control back to the system. In other words, instead of running an endless main loop, you run each frame in a callback function, using:
 
-    int SDL_iPhoneSetAnimationCallback(SDL_Window * window, int interval, void (*callback)(void*), void *callbackParam);
+    int SDL_iPhoneSetAnimationCallback(SDL_Window * GameWindow, int interval, void (*callback)(void*), void *callbackParam);
 
 This will set up the given function to be called back on the animation callback, and then you have to return from main() to let the Cocoa event loop run.
 
@@ -254,9 +254,9 @@ e.g.
         // Initialize the Game Center for scoring and matchmaking
         InitGameCenter();
     
-        // Set up the game to run in the window animation callback on iOS
+        // Set up the game to run in the GameWindow animation callback on iOS
         // so that Game Center and so forth works correctly.
-        SDL_iPhoneSetAnimationCallback(window, 1, ShowFrame, NULL);
+        SDL_iPhoneSetAnimationCallback(GameWindow, 1, ShowFrame, NULL);
     #else
         while ( running ) {
             ShowFrame(0);

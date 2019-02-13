@@ -36,7 +36,7 @@ SDL_HINT_VIDEO_WIN_D3DCOMPILER hint (see SDL_hints.h for more details).
 Known Bugs:
     
     * SDL_GL_SetSwapInterval is currently a no op when using ANGLE. It appears
-      that there's a bug in the library which prevents the window contents from
+      that there's a bug in the library which prevents the GameWindow contents from
       refreshing if this is set to anything other than the default value.
      
 Vulkan Surface Support

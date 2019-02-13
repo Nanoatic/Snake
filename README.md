@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a 64 bit snake game made by using only sdl surfaces , couple of simple wav sounds and a font. 
+This is a 64 bit SnakeGame game made by using only sdl surfaces , couple of simple wav sounds and a font. 
 
 ##  Requirements
 

@@ -143,7 +143,7 @@ there are some more things you should do before shipping your product...
    contains some meta-information about your application (like some copyright
    information, the version of your app, the name of an optional icon file,
    and other things). Part of that information is displayed by the Finder
-   when you click on the .app, or if you look at the "Get Info" window.
+   when you click on the .app, or if you look at the "Get Info" GameWindow.
    More information about Info.plist files can be found on Apple's homepage.
 
 
@@ -233,7 +233,7 @@ following locations:
         starts up and the libraries finish loading, a Cocoa procedure is called,
         which sets up the working directory and calls your main() method.
         You are free to modify your Cocoa app with generally no consequence 
-        to SDL. You cannot, however, easily change the SDL window itself.
+        to SDL. You cannot, however, easily change the SDL GameWindow itself.
         Functionality may be added in the future to help this.
 
 

@@ -91,8 +91,8 @@ extern DECLSPEC int SDLCALL SDL_LinuxSetThreadPriority(Sint64 threadID, int prio
 /* Platform specific functions for iOS */
 #if defined(__IPHONEOS__) && __IPHONEOS__
 
-#define SDL_iOSSetAnimationCallback(window, interval, callback, callbackParam) SDL_iPhoneSetAnimationCallback(window, interval, callback, callbackParam)
-extern DECLSPEC int SDLCALL SDL_iPhoneSetAnimationCallback(SDL_Window * window, int interval, void (*callback)(void*), void *callbackParam);
+#define SDL_iOSSetAnimationCallback(GameWindow, interval, callback, callbackParam) SDL_iPhoneSetAnimationCallback(GameWindow, interval, callback, callbackParam)
+extern DECLSPEC int SDLCALL SDL_iPhoneSetAnimationCallback(SDL_Window * GameWindow, int interval, void (*callback)(void*), void *callbackParam);
 
 #define SDL_iOSSetEventPump(enabled) SDL_iPhoneSetEventPump(enabled)
 extern DECLSPEC void SDLCALL SDL_iPhoneSetEventPump(SDL_bool enabled);
