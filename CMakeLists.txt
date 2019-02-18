@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.7)
+
 project(Snaky)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(SDL_STATIC 1)
 if (UNIX)
+
     set(SDL2_LIBRARY_DIR /usr/lib/x86_64-linux-gnu)
     set(SDL2_INCLUDE_DIR /usr/include/SDL2)
 
@@ -16,6 +17,7 @@ endif (UNIX)
 
 
 if (WIN32)
+
     set(SDL2_LIBRARY_DIR libs/SDL2-2.0.9-Mingw/x86_64-w64-mingw32/lib)
     set(SDL2_DLL_DIR libs/SDL2-2.0.9-Mingw/x86_64-w64-mingw32/lib)
 
