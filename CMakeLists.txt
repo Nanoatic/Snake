@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 20)
 if (UNIX)
 
     set(SDL2_LIBRARY_DIR /usr/lib/x86_64-linux-gnu)
-    set(SDL2_INCLUDE_DIR /usr/include/SDL2)
+    set(SDL2_INCLUDE_DIR /usr/include/)
 
     set(SDL2_LIBRARY libSDL2.so)
     set(SDL2_mixer_LIBRARY libSDL2_mixer.so)
